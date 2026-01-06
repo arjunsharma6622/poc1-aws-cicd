@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: POC-1 CI/CD using Elastic Beanstalk
+
+Parameters:
+  AppName:
+    Type: String
+  EnvironmentName:
+    Type: String
+    Default: poc1-env
+
+Resources:
+  EBApplication:
+    Type: AWS::ElasticBeanstalk::Application
+    Properties:
+      ApplicationName: !Ref AppName
+
+  EBEnvironment:
+    Type: AWS::ElasticBeanstalk::Environment
+    Properties:
+      ApplicationName: !Ref AppName
+      EnvironmentName: !Ref EnvironmentName
+      SolutionStackName: "64bit Amazon Linux 2 v5.8.4 running Node.js 18"
