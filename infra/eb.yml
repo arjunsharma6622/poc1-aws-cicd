@@ -19,4 +19,6 @@ Resources:
     Properties:
       ApplicationName: !Ref AppName
       EnvironmentName: !Ref EnvironmentName
-      SolutionStackName: "64bit Amazon Linux 2 v5.8.4 running Node.js 18"
+      SolutionStackName: "64bit Amazon Linux 2023 v6.7.1 running Node.js 22"
+
+
