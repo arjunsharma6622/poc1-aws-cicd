@@ -16,9 +16,8 @@ Resources:
 
   EBEnvironment:
     Type: AWS::ElasticBeanstalk::Environment
+    DependsOn: EBApplication
     Properties:
       ApplicationName: !Ref AppName
       EnvironmentName: !Ref EnvironmentName
-      SolutionStackName: "64bit Amazon Linux 2023 v6.7.1 running Node.js 22"
-
-
+      SolutionStackName: "64bit Amazon Linux 2 running Node.js 18"
